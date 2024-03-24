@@ -11,8 +11,8 @@ const Header = () => {
 
     return (
         <div>
-            <nav className="px-10">
-            <div className="navbar bg-base-100">
+            <nav>
+            <div className="navbar bg-base-100 shadow-xl px-10 fixed">
                 <div className="navbar-start">
                     <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -26,11 +26,11 @@ const Header = () => {
                 </div>
 
                 <div className="navbar-end">
-                    <ul className="menu menu-horizontal px-1 space-x-6">
+                    <ul className="menu menu-horizontal px-1 space-x-6 text-lg font-semibold md:flex hidden">
                         {navItems}
                     </ul>
 
-                    <div>
+                    <div className="ml-3">
                     <label className="swap swap-rotate">  
                         {/* this hidden checkbox controls the state */}
                         <input type="checkbox" className="theme-controller" value="synthwave" />
