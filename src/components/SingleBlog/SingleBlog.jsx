@@ -3,8 +3,7 @@ import { Link, Outlet, useLoaderData } from "react-router-dom";
 
 const SingleBlog = () => {
     const blog = useLoaderData()
-    const {cover_image, title, created_at, description, reading_time_minutes, readable_publish_date, positive_reactions_count, public_reactions_count, comments_count, user, tags} = blog;
-    console.log(blog);
+    const {title, reading_time_minutes, public_reactions_count,  user, } = blog;
 
     const [tabIndex, setTabtIndex] = useState(0)
     return (
