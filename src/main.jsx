@@ -12,6 +12,7 @@ import Blog from './components/Blog/Blog';
 import Bookmark from './components/Bookmark/Bookmark';
 import SingleBlog from './components/SingleBlog/SingleBlog';
 import Content from './components/Content/Content';
+import Autor from './components/Author/Autor';
 
 const router = createBrowserRouter([
   {
@@ -34,11 +35,13 @@ const router = createBrowserRouter([
         children: [
           {
             index: true,
-            element: <Content></Content>
+            element: <Content></Content>,
+            loader: ({params}) => fetch(`https://dev.to/api/articles/${params.id}`)
           },
           {
-            path: 'autor',
-            element:
+            path: 'author',
+            element:<Autor></Autor>,
+            loader: ({params}) => fetch(`https://dev.to/api/articles/${params.id}`)
           }
         ]
       },

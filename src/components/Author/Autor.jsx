@@ -1,7 +1,7 @@
 
 const Autor = () => {
     return (
-        <div>
+        <div className='border border-purple-400 p-5'>
             this is author
         </div>
     );
