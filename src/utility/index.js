@@ -11,7 +11,7 @@ const getLocalStBlog = () =>{
 // save blogs
 const saveLocalStBlogs = blog =>{
     let blogs = getLocalStBlog();
-    const isExsit = blogs.find(blog => blog.id === blogs.id);
+    const isExsit = blogs.find(blogs => blogs.id === blog.id);
     if(isExsit){
         return toast.error("Already Bookmarked")
     }
