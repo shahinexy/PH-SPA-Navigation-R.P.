@@ -3,7 +3,7 @@ import placeholder from '../../assets/404.jpg'
 const BlogCards = ({blog}) => {
     const {id, title, description, cover_image, edited_at} = blog;
   return (
-    <div className="max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-50 border-2 border-purple-400 hover:scale-105 transition">
+    <div className="max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-50 border-2 border-purple-400 hover:scale-105 transition p-2">
       <Link
         to={`/blog/${id}`}
         

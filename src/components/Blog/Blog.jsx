@@ -23,13 +23,10 @@ const Blog = () => {
 				<p>{blogs[0].description}</p>
 			</div>
 		</a>
-		<div className="grid justify-center grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+		<div className="grid justify-center grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 ">
             {
-                blogs.map(blog => <BlogCards key={blog.id} blog={blog}></BlogCards>)
+                blogs.slice(1, blogs.length-1).map(blog => <BlogCards key={blog.id} blog={blog}></BlogCards>)
             }
-		</div>
-		<div className="flex justify-center">
-			<button type="button" className="px-6 py-3 text-sm rounded-md hover:underline dark:bg-gray-50 dark:text-gray-600">Load more posts...</button>
 		</div>
 	</div>
 </section>

@@ -14,6 +14,8 @@ import SingleBlog from './components/SingleBlog/SingleBlog';
 import Content from './components/Content/Content';
 import Autor from './components/Author/Autor';
 
+import { Toaster } from 'react-hot-toast';
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -56,5 +58,6 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <RouterProvider router={router} />
+    <Toaster></Toaster>
   </React.StrictMode>,
 )
