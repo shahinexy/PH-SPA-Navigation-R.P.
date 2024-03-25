@@ -8,6 +8,8 @@ import {
 } from "react-router-dom";
 import Root from './components/Root/Root';
 import Home from './components/Home/Home';
+import Blog from './components/Blog/Blog';
+import Bookmark from './components/Bookmark/Bookmark';
 
 const router = createBrowserRouter([
   {
@@ -17,6 +19,15 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>,
+      },
+      {
+        path: '/blog',
+        element: <Blog></Blog>,
+        loader: () => fetch('https://dev.to/api/articles?per_page=20&top=7')
+      },
+      {
+        path: '/bookmarks',
+        element: <Bookmark></Bookmark>
       }
     ]
   },
