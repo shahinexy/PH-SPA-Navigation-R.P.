@@ -1,9 +1,14 @@
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigation } from "react-router-dom";
 import BlogCards from "../BlogCards/BlogCards";
+import Loader from "../Loader/Loader";
 
 const Blog = () => {
 
     const blogs = useLoaderData()
+
+	const navigate = useNavigation()
+
+	if(navigate.state === 'loading') return <Loader></Loader>
 
     return (
         <div>

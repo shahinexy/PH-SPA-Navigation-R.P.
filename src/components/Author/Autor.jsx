@@ -6,11 +6,11 @@ const Autor = () => {
     return (
         <div className='border border-purple-400 p-5 flex justify-center'>
             <div className="flex flex-col justify-center max-w-xs p-6  rounded-xl sm:px-12 dark:bg-gray-50 dark:text-gray-800">
-	<img src={organization.profile_image} alt="" className="w-32 h-32 mx-auto rounded-full dark:bg-gray-500 aspect-square" />
+	<img src={organization?.profile_image} alt="" className="w-32 h-32 mx-auto rounded-full dark:bg-gray-500 aspect-square" />
 	<div className="space-y-4 text-center divide-y dark:divide-gray-300">
 		<div className="my-2 space-y-1">
-			<h2 className="text-xl font-semibold sm:text-2xl">{organization.name}</h2>
-			<p className="px-5 text-xs sm:text-base dark:text-gray-600">Username: {organization.username}</p>
+			<h2 className="text-xl font-semibold sm:text-2xl">{organization?.name}</h2>
+			<p className="px-5 text-xs sm:text-base dark:text-gray-600">Username: {organization?.username}</p>
 		</div>
 		<div className="flex justify-center pt-2 space-x-4 align-center">
 			<a rel="noopener noreferrer" href="#" aria-label="GitHub" className="p-2 rounded-md dark:text-gray-800 hover:dark:text-violet-600">
